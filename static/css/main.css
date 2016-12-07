@@ -1,0 +1,60 @@
+html, body{
+	height: 100%;
+}
+
+.logo{
+    color: #0061CF;
+    font-size: 36px;
+}
+
+.page-title{
+    text-align: center;
+    color: #0061CF;
+}
+
+#content {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -5%;
+}
+
+.centered 
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.panel-heading{
+	text-align: center;
+}
+
+.panel-body{
+	text-align: center
+}
+
+
+
+.session{
+
+}
+
+.session button{
+	width:20%;
+	height:40px;
+    font-size: large;
+
+}
+
+footer{
+	height:5%;
+    
+}
+
+footer .logo{
+	color: #0061CF;
+    font-size: 20px;
+}
+
