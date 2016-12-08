@@ -20,6 +20,15 @@ html, body{
         margin: 0 auto -5%;
 }
 
+#firepad-container{
+
+    height: 100%;
+}
+
+.firepad {
+    width: 100%;
+    min-height: 400px;
+}
 .centered 
 {
   position: fixed;
@@ -29,13 +38,22 @@ html, body{
 
 .panel-heading{
 	text-align: center;
+    font-size: medium;
+
+}
+.panel-heading p{
+    padding: 0;
+    color: #0061CF;
+}
+
+.panel-body .CodeMirror{
+    text-align: left;
 }
 
 .panel-body{
-	text-align: center
+	text-align: center;
+    min-height: 40%;
 }
-
-
 
 .session{
 
@@ -46,6 +64,12 @@ html, body{
 	height:40px;
     font-size: large;
 
+}
+
+.session input{
+    width:20%;
+    height:40px;
+    font-size: medium;
 }
 
 footer{

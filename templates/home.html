@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{ } Code.ing</title>
+
+    <meta charset="utf-8" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    {{ codemirror.include_codemirror() }}
+
+    <!-- Firepad -->
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+
+      <script src="../static/js/jquery-3.1.1.min.js"></script>
+
+    <!-- my js -->
+      <script src="../static/js/main.js"></script>
+      <script type="text/javascript">
+          function readText()
+          {
+              console.log('I work');
+          }
+          document.onload=function () {
+
+          }
+
+      </script>
+
+
+  </head>
+  <body>
+
+        <nav class="navbar-inverse navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand logo" href="#">
+                { } Code.ing
+              </a>
+            </div>
+
+
+          </div>
+        </nav>
+
+
+      <div class="container" id="content">
+          <div class="page-header">
+            <h1 class="page-title">{ } Code.ing <small>Welcome to pair programming</small></h1>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p>Your Pair programming session is: {{pair_name}}</p>
+            </div>
+            <div class="panel-body" id="code">
+
+                <script type="text/javascript">
+                    var editor = CodeMirror(document.getElementById("code"), {
+                      lineNumbers: true,
+                      extraKeys: {"Ctrl-Space": "autocomplete"},
+                      mode: {name: "python"}
+                    });
+
+                    editor.on("change", function(cm, change) {
+                        doc=cm.getDoc();
+                        console.log("something changed! (" + doc.getCursor().line+":"+doc.getLine( doc.getCursor().line)+ ")");
+                        line_number=doc.getCursor().line ;
+                        text_line = doc.getLine(line_number);
+                        data = {
+                            "line":line_number,
+                            "text":text_line
+                        }
+                         $.post("/code/update",data);
+                    });
+
+                </script>
+
+            </div>
+        </div>
+            </div>
+          </div>
+
+
+
+
+      <footer class="container-fluid text-center">
+          <a href="#myPage" title="To Top">
+            <span class="logo">{ } Code.ing</span>
+          </a>
+          <p>Powered by <a href="#" title="">Andela</a></p>
+      </footer>
+  </body>
+</html>
