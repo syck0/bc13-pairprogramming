@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{ } Code.ing</title>
+
+    <meta charset="utf-8" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    {{ codemirror.include_codemirror() }}
+
+    <!-- Firepad -->
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+
+      <script src="../static/js/jquery-3.1.1.min.js"></script>
+
+    <!-- my js -->
+      <script src="../static/js/setup.js"></script>
+
+
+  </head>
+  <body>
+
+        <nav class="navbar-inverse navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand logo" href="#">
+                { } Code.ing
+              </a>
+            </div>
+
+
+          </div>
+        </nav>
+
+
+      <div class="container" id="content">
+          <div class="page-header">
+            <h1 class="page-title">{ } Code.ing <small>Welcome to pair programming</small></h1>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p>Your Pair programming session is: {{pair_name}}</p>
+            </div>
+            <div class="panel-body" id="code">
+
+                <script type="text/javascript">
+
+
+
+
+                </script>
+
+            </div>
+        </div>
+            </div>
+          </div>
+
+
+
+
+      <footer class="container-fluid text-center">
+          <a href="#myPage" title="To Top">
+            <span class="logo">{ } Code.ing</span>
+          </a>
+          <p>Powered by <a href="#" title="">Andela</a></p>
+      </footer>
+  </body>
 </html>

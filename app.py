@@ -19,9 +19,6 @@ app.config.from_object(__name__)
 codemirror = CodeMirror(app)
 
 
-
-
-
 @app.route("/")
 def main():
     return render_template("index.html")
@@ -40,9 +37,11 @@ def create_session():
     return render_template("home.html",pair_name=session['pair_name'], form = form)
 
 
-@app.route("/join/session")
+@app.route("/join/session", methods=['POST'])
 def join_session():
-    pass
+    return render_template('join.html')
+
+
 
 @app.route("/code/update", methods=['POST'])
 def code_update():
