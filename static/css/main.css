@@ -20,15 +20,6 @@ html, body{
         margin: 0 auto -5%;
 }
 
-#firepad-container{
-
-    height: 100%;
-}
-
-.firepad {
-    width: 100%;
-    min-height: 400px;
-}
 .centered 
 {
   position: fixed;
