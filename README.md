@@ -6,13 +6,13 @@ Pair programming is an agile software development technique in which two program
 
 ## Dependencies
 
-###Backend Dependencies
+### Backend Dependencies
 
 * Flask
 * Firebase
 * Pyrebase - A simple python wrapper for the Firebase API.
 
-###Frontend dependencies
+### Frontend dependencies
 
 * JQuery
 * CodeMirror - An online text editor
